@@ -1,11 +1,11 @@
 /*
 ======================================================
 	
-	NOTE:
+NOTE:
 	
-	The code below serves only demonstration purposes.
+The code below serves only demonstration purposes.
 	
-	It could be improved.
+It could be improved.
 	
 ======================================================
 
@@ -168,7 +168,7 @@ var RightCup 	= new Cup();
 
 
 //Puts the "thrill" into the game (pseudo randomness)
-var Shuffle = new Randomizer(0,2);
+var Shuffle 	= new Randomizer(0,2);
 var Dice	= new Randomizer(0,9);
 
 
@@ -226,7 +226,7 @@ function startRound()
 	var TrueCup = Shuffle.start();
 	
 	
-	if(TrueCup === 0)		//Left Cup
+	if(TrueCup === 0)	//Left Cup
 	{
 		LeftCup.putObject(true);
 		MiddleCup.putObject(false);
@@ -257,7 +257,7 @@ function startRound()
 function choice(selected)
 {
 	var userAnswer 	= document.getElementById('user-answer');
-	var show 		= document.getElementById('riddle');
+	var show 	= document.getElementById('riddle');
 	
 	if(Shuffle.getLastResult() === selected)
 	{
@@ -296,10 +296,10 @@ function choice(selected)
 //Checks the user given answer
 function checkAnswer()
 {
-	var show 		= document.getElementById('riddle');
+	var show 	= document.getElementById('riddle');
 	var deactivate	= document.getElementsByName('cupmap')[0];
 	var userAnswer 	= document.getElementById('user-answer');
-	var answer 		= MyRiddles.GetInfo(Dice.getLastResult(), "answer");
+	var answer 	= MyRiddles.GetInfo(Dice.getLastResult(), "answer");
 	
 	
 	if(answer === userAnswer.value)
@@ -332,16 +332,16 @@ INIT GAME
 */
 
 //All riddles which will be used in the game
-MyRiddles.Fill("A box without hinges, key or lid, Inside, a golden treasure is hid.", 						"egg");
-MyRiddles.Fill("Forward I am heavy, backward I am not. What am I?", 										"ton");
-MyRiddles.Fill("Give me food and I will live, Give me water, and I will die.", 								"fire");
+MyRiddles.Fill("A box without hinges, key or lid, Inside, a golden treasure is hid.", 				"egg");
+MyRiddles.Fill("Forward I am heavy, backward I am not. What am I?", 						"ton");
+MyRiddles.Fill("Give me food and I will live, Give me water, and I will die.", 					"fire");
 MyRiddles.Fill("I look at you, you look at me I raise my right,you raise your left What is this object?", 	"mirror");
-MyRiddles.Fill("If you divide thirty by half, and add ten, what do you get?", 								"70");
-MyRiddles.Fill("The more that there is, the less you can see.", 											"darkness");
-MyRiddles.Fill("What can you catch but not throw?", 														"cold");
-MyRiddles.Fill("What does a rich man want, a poor man have, and a dead man eat?", 							"nothing");
-MyRiddles.Fill("What kind of room has no windows or doors?", 												"mushroom");
-MyRiddles.Fill("You must keep it after giving it.", 														"promise");
+MyRiddles.Fill("If you divide thirty by half, and add ten, what do you get?", 					"70");
+MyRiddles.Fill("The more that there is, the less you can see.", 						"darkness");
+MyRiddles.Fill("What can you catch but not throw?", 								"cold");
+MyRiddles.Fill("What does a rich man want, a poor man have, and a dead man eat?", 				"nothing");
+MyRiddles.Fill("What kind of room has no windows or doors?", 							"mushroom");
+MyRiddles.Fill("You must keep it after giving it.", 								"promise");
 
 //First round
 startRound()
