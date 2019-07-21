@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+	
+		<title>TITLE</title>
+		<meta charset="UTF-8">
+	
+	</head>
+	
+	
+	<!--
+		NOTE:
+		===============================================================================================
+		
+		Because of simplicity & demonstration purposes, the "style" attribute is used within html tags.
+		Nevertheless it is recommended to use CSS for styling.
+		
+		In '<body>' the 'style="text-align:center;"' 
+		centers similar like the tag '<center>' which was used in previous mini-projects.
+		
+		===============================================================================================
+	-->
+
+	
+	
+	
+	<body style="text-align:center;">
+	
+	
+		<section>
+		
+			<h2>Shuffle Doh!</h2>
+			
+			
+			<img style="border-radius: 20px;" id="main-image" src="Cups.jpg" usemap="#cupmap" >
+			
+			<!--INTERACTING AREA-->
+			<map name="cupmap">
+			
+				<area shape="rect" coords="50,110,150,200" onclick="choice(0);"><!--	LEFT 	CUP-->
+				<area shape="rect" coords="175,110,300,200" onclick="choice(1);;"><!--	MIDDLE 	CUP-->
+				<area shape="rect" coords="335,110,500,200" onclick="choice(2);;"><!--	RIGTH 	CUP-->
+			
+			</map>
+			
+			
+			<!--ROUNDS-->
+			<p style="font-size:120%; font-family:verdana; color:green;">Round <span id="round-number">X</span></p>
+			
+			
+			<!--POINTS-->
+			<p style="font-size:120%; font-family:verdana; color:magenta;">Points <span id="points">Y</span></p>
+			
+			
+			<hr style="border-color:blue;" width="15%;">	
+			<br>
+		
+		
+			<!--ANSWER-->
+			<input id="user-answer" type="text" placeholder="Resolve riddle(small letters)" oninput="checkAnswer();">
+			
+			
+			<button type="button" onclick="refresh();">RESTART</button>
+			
+			
+			<!--RIDDLE-->
+			<h3>Riddle</h3>
+			<p id="riddle"></p>
+			
+			
+		</section>
+	
+	
+		<hr width="50%;">	
+	
+		<section>
+		
+			<br>
+			<br>
+			For more explanation please visit - 
+			<a href="https://github.com/Incrementis/Javascript-storing-private-data-/wiki"> 
+			Storing private data Wiki</a>
+			
+		</section>
+		
+
+	</body>
+
+	
+	
+	<footer>
+	
+		<script language="javascript" type="text/javascript" src="private.js"></script>
+	
+	</footer>
+	 
+
+</html>
